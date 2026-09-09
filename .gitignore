@@ -1,0 +1,10 @@
+# Source material — deliberately not published.
+# The brand deck and licensed artwork stay local; every asset the site
+# needs is already embedded in index.html as a data URI.
+# (pattern is globbed: the local folder name has a trailing space)
+References*/
+*.pdf
+
+.DS_Store
+node_modules/
+.vercel/
