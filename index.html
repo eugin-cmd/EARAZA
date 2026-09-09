@@ -430,6 +430,18 @@ a.lnk:hover{ border-bottom-color:var(--orange); }
 .stat span{ display:block; margin-top:.35rem; font-size:.85rem; color:var(--slate); line-height:1.5; }
 
 
+/* ─────────────── vision / mission statement bands ─────────────── */
+.vband{ padding:clamp(2.6rem,5.5vh,4.4rem) var(--pad); }
+.vband.teal{ background:var(--teal); }
+.vband.lime{ background:var(--lime); }
+.vband .label{ color:rgba(20,38,44,.6); }
+.vband hr.rule{ background:rgba(20,38,44,.22); max-width:170px; }
+.vband .stmt{
+  margin:0; max-width:50ch; color:var(--ink); font-weight:400;
+  font-size:clamp(1.14rem,1rem + 1.1vw,1.66rem); line-height:1.42;
+}
+.vband .h2{ color:var(--ink); }
+
 /* ─────────────── panels (deck p6/p7 cards) ─────────────── */
 .cards{ display:grid; gap:1.1rem; margin-top:2rem; }
 @media (min-width:820px){ .cards.c3{ grid-template-columns:repeat(3,1fr); } .cards.c2{ grid-template-columns:1fr 1fr; } }
@@ -441,12 +453,6 @@ a.lnk:hover{ border-bottom-color:var(--orange); }
 }
 .card:hover{ border-color:var(--orange); box-shadow:0 6px 26px -14px rgba(20,38,44,.28); }
 .grey .card{ background:var(--paper); }
-.card.fill-teal{ background:var(--teal); border-color:var(--teal); }
-.card.fill-lime{ background:var(--lime); border-color:var(--lime); }
-.card.fill-teal:hover,.card.fill-lime:hover{ border-color:var(--ink); }
-.card.fill-teal *,.card.fill-lime *{ color:var(--ink); }
-.card.fill-teal .label,.card.fill-lime .label{ color:rgba(20,38,44,.68); }
-.card.fill-teal .rule,.card.fill-lime .rule{ background:rgba(20,38,44,.22); }
 
 .ticks{ list-style:none; margin:0; padding:0; display:grid; gap:.58rem; }
 .ticks li{ position:relative; padding-left:1.4rem; color:var(--slate); font-size:.95rem; line-height:1.55; }
@@ -457,8 +463,6 @@ a.lnk:hover{ border-bottom-color:var(--orange); }
 .ticks li b{ color:var(--ink); font-weight:600; }
 .ticks.teal li::before{ border-color:var(--teal); }
 .ticks.dark li::before{ border-color:var(--ink); }
-.card.fill-teal .ticks li,.card.fill-lime .ticks li{ color:rgba(20,38,44,.86); }
-.card.fill-teal .ticks li::before,.card.fill-lime .ticks li::before{ border-color:var(--ink); }
 
 .free{
   font-size:clamp(2.2rem,1.6rem + 2.4vw,3.1rem); font-weight:700;
@@ -804,21 +808,40 @@ footer{ background:var(--forest); padding:2.2rem var(--pad) 2.6rem; }
           <p class="label" data-i18n="mis.eyebrow">Our mission</p>
           <h2 class="h2" data-i18n="mis.h2">Cooperation as the working method</h2>
           <hr class="rule short">
-          <p data-i18n="mis.lede">EARAZA aims at strengthening cooperation and developing relations between zoos, oceanariums, breeding centres, exotariums and aquariums of the countries of the Eurasian region.</p>
         </div>
         <div class="rv d1">
-          <div class="cards c2" style="margin-top:0">
-            <div class="card fill-teal">
-              <p class="label" data-i18n="vis.label">Our vision</p><hr class="rule">
-              <p data-i18n="vis.body">Building a global conservation community that protects biodiversity, advances animal welfare and inspires future generations.</p>
-            </div>
-            <div class="card fill-lime">
-              <p class="label" data-i18n="mis.label">Our mission</p><hr class="rule">
-              <p data-i18n="mis.body">Uniting experts and institutions to advance wildlife conservation through collaboration, knowledge, science, responsible breeding and education.</p>
-            </div>
-          </div>
+          <p data-i18n="mis.lede">EARAZA aims at strengthening cooperation and developing relations between zoos, oceanariums, breeding centres, exotariums and aquariums of the countries of the Eurasian region.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="vband teal">
+    <div class="wrap split">
+      <div class="rv">
+        <p class="label" data-i18n="vis.label">Our vision</p>
+        <hr class="rule">
+      </div>
+      <div class="rv d1">
+        <p class="stmt" data-i18n="vis.body">Building a global conservation community that protects biodiversity, advances animal welfare and inspires future generations.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="vband lime">
+    <div class="wrap split">
+      <div class="rv">
+        <p class="label" data-i18n="mis.label">Our mission</p>
+        <hr class="rule">
+      </div>
+      <div class="rv d1">
+        <p class="stmt" data-i18n="mis.body">Uniting experts and institutions to advance wildlife conservation through collaboration, knowledge, science, responsible breeding and education.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" data-sec="Science">
+    <div class="wrap">
 
       <div class="cards c2 rv d2">
         <div class="card">
