@@ -439,13 +439,16 @@ a.lnk:hover{ border-bottom-color:var(--orange); }
 .vband{ padding:clamp(2.6rem,5.5vh,4.4rem) var(--pad); }
 .vband.teal{ background:var(--teal); }
 .vband.lime{ background:var(--lime); }
-.vband .label{ color:rgba(20,38,44,.6); }
-.vband hr.rule{ background:rgba(20,38,44,.22); max-width:170px; }
+.vband hr.rule{ background:rgba(20,38,44,.26); max-width:230px; margin-top:1.3rem; }
 .vband .stmt{
   margin:0; max-width:50ch; color:var(--ink); font-weight:400;
   font-size:clamp(1.14rem,1rem + 1.1vw,1.66rem); line-height:1.42;
 }
-.vband .h2{ color:var(--ink); }
+.vband .h2{
+  color:var(--ink);
+  font-size:clamp(1.95rem,1.15rem + 3vw,3.4rem);
+  letter-spacing:-.012em;
+}
 
 /* ─────────────── panels (deck p6/p7 cards) ─────────────── */
 .cards{ display:grid; gap:1.1rem; margin-top:2rem; }
@@ -824,7 +827,7 @@ footer{ background:var(--forest); padding:2.2rem var(--pad) 2.6rem; }
   <section class="vband teal">
     <div class="wrap split">
       <div class="rv">
-        <p class="label" data-i18n="vis.label">Our vision</p>
+        <h2 class="h2" data-i18n="vis.label">Our vision</h2>
         <hr class="rule">
       </div>
       <div class="rv d1">
@@ -836,7 +839,7 @@ footer{ background:var(--forest); padding:2.2rem var(--pad) 2.6rem; }
   <section class="vband lime">
     <div class="wrap split">
       <div class="rv">
-        <p class="label" data-i18n="mis.label">Our mission</p>
+        <h2 class="h2" data-i18n="mis.label">Our mission</h2>
         <hr class="rule">
       </div>
       <div class="rv d1">
